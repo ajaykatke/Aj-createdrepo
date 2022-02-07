@@ -35,7 +35,7 @@ jobs:
         echo "${{ env.BRANCH }}"
         echo "${{ github.repository }}"
         echo "${{env.reponame}}"
-        echo "$GITHUB_ENV"
+        echo $GITHUB_ENV
         curl \
         -X PUT \
         -H "Accept: application/vnd.github.v3+json" \
