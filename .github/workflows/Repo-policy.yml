@@ -12,6 +12,7 @@ env:
   Admin: Punith0480
   Writer: Punith0480
   TOKEN: ${{ secrets.TOKEN }}
+  reponame: GITHUB_ENV
 
 jobs: 
   build:
@@ -24,7 +25,7 @@ jobs:
          echo "${{ github.event.issue.number }}"
          echo "reponame=$(curl \
          -H "Accept: application/vnd.github.v3+json" \
-         https://api.github.com/repos/ajaykatke/Aj-createdrepo/issues/"${{ github.event.issue.number }}" | grep body | grep -oP '(?<=reponame:)\w+' )" >> $GITHUB_ENV
+         https://api.github.com/repos/ajaykatke/Aj-createdrepo/issues/"${{ github.event.issue.number }}" | grep body | grep -oP '(?<=reponame:)\D+\w+' )" >> ${{ env.GITHUB_ENV }}
     
           
     
