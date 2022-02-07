@@ -11,7 +11,7 @@ env:
   check_build_status: build,test
   Admin: Punith0480
   Writer: Punith0480
-  TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  TOKEN: ${{ secrets.TOKEN }}
 
 jobs: 
   build:
